@@ -1,0 +1,24 @@
+server:
+  port: 8083
+spring:
+  output.ansi.enabled: ALWAYS
+  security:
+    oauth2:
+      client:
+        provider:
+          spring:
+            issuer-uri: http://ieims.local:8080
+        registration:
+          reg-client-2:
+            provider: spring
+            client-id: "demo-2"
+            client-secret: "secret-2"
+            authorization-grant-type: authorization_code
+            client-authentication-method: client_secret_basic
+            redirect-uri: http://127.0.0.1:8083/login/oauth2/code/reg-client-2
+            scope: user.read,openid
+
+  codec:
+    log-request-details: true
+  mvc:
+    log-request-details: true
