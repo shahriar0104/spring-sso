@@ -7,7 +7,7 @@ spring:
       client:
         provider:
           spring:
-            issuer-uri: http://ieims.local:8080
+            issuer-uri: http://localhost:8080
         registration:
           reg-client-2:
             provider: spring

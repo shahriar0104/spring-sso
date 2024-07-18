@@ -1,6 +1,6 @@
 server:
   port: 8080
-  address: ieims.local
+  address: localhost
 spring:
   output.ansi.enabled: ALWAYS
   security:
@@ -10,8 +10,8 @@ spring:
           reg-client:
             require-authorization-consent: false
             registration:
-              client-id: demo
-              client-secret: secret
+              client-id: "demo"
+              client-secret: "secret"
               authorization-grant-types: authorization_code
               redirect-uris: http://127.0.0.1:8082/login/oauth2/code/reg-client
               scopes: user.read,user.write,openid

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.himanshuntwk</groupId>
-	<artifactId>spring-oauth-client</artifactId>
+	<artifactId>spring-oauth-client-2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-oauth-client</name>
 	<description>Demo project for Spring Boot</description>
