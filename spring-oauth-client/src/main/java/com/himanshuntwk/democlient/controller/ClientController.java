@@ -28,6 +28,7 @@ public class ClientController {
         .loadAuthorizedClient("reg-client", principal.getName())
         .getAccessToken().getTokenValue();
     httpHeaders.set("Authorization", "Bearer " + accessToken);
+    System.out.println(accessToken);
 
     HttpEntity<String> entity = new HttpEntity<>(httpHeaders);
     ResponseEntity<String> response =

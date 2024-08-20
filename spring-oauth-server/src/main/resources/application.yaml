@@ -13,7 +13,8 @@ spring:
               client-id: "demo"
               client-secret: "secret"
               authorization-grant-types: authorization_code
-              redirect-uris: http://127.0.0.1:8082/login/oauth2/code/reg-client
+#              redirect-uris: http://127.0.0.1:8082/login/oauth2/code/reg-client
+              redirect-uris: http://localhost:3000/api/auth/callback/custom-oauth
               scopes: user.read,user.write,openid
               client-authentication-methods: client_secret_basic
           reg-client-2:
@@ -22,7 +23,8 @@ spring:
               client-id: "demo-2"
               client-secret: "secret-2"
               authorization-grant-types: authorization_code
-              redirect-uris: http://127.0.0.1:8083/login/oauth2/code/reg-client-2
+#              redirect-uris: http://127.0.0.1:8083/login/oauth2/code/reg-client-2
+              redirect-uris: http://localhost:4000/api/auth/callback/custom-oauth
               scopes: user.read,user.write,openid
               client-authentication-methods: client_secret_basic
   codec:
