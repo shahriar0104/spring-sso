@@ -6,28 +6,34 @@ spring:
   security:
     oauth2:
       authorizationserver:
-        client:
-          reg-client:
-            require-authorization-consent: false
-            registration:
-              client-id: "demo"
-              client-secret: "secret"
-              authorization-grant-types: authorization_code
-#              redirect-uris: http://127.0.0.1:8082/login/oauth2/code/reg-client
-              redirect-uris: http://ieims.local:3004/cdr/api/auth/callback/custom-oauth
-              scopes: user.read,user.write,openid
-              client-authentication-methods: client_secret_basic
-          reg-client-2:
-            require-authorization-consent: false
-            registration:
-              client-id: "demo-2"
-              client-secret: "secret-2"
-              authorization-grant-types: authorization_code
-#              redirect-uris: http://127.0.0.1:8083/login/oauth2/code/reg-client-2
-              redirect-uris: http://ieims.local:3010/mst/api/auth/callback/custom-oauth
-#              redirect-uris: http://localhost:4000/api/auth/callback/custom-oauth
-              scopes: user.read,user.write,openid
-              client-authentication-methods: client_secret_basic
+        settings:
+          issuer: http://ieims.local:8080
+#        client:
+#          reg-client:
+#            require-authorization-consent: false
+#            registration:
+#              client-id: "demo"
+#              client-secret: "secret"
+#              authorization-grant-types: authorization_code, refresh_token
+##              redirect-uris: http://127.0.0.1:8082/login/oauth2/code/reg-client
+#              redirect-uris: http://ieims.local:3004/cdr/api/auth/callback/custom-oauth
+#              scopes: user.read,user.write,openid
+#              client-authentication-methods: client_secret_basic, client_secret_post
+#          reg-client-2:
+#            require-authorization-consent: false
+#            registration:
+#              client-id: "demo-2"
+#              client-secret: "secret-2"
+#              authorization-grant-types: authorization_code, refresh_token
+##              redirect-uris: http://127.0.0.1:8083/login/oauth2/code/reg-client-2
+#              redirect-uris: http://ieims.local:3010/mst/api/auth/callback/custom-oauth
+##              redirect-uris: http://localhost:4000/api/auth/callback/custom-oauth
+#              scopes: user.read,user.write,openid
+#              client-authentication-methods: client_secret_basic, client_secret_post
+#      token:
+#        settings:
+#          access-token-time-to-live: 1m
+#          refresh-token-time-to-live: 30m
   codec:
     log-request-details: true
   mvc:
